@@ -63,7 +63,7 @@ header > p{
     padding-right: 10px;
     margin: auto;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.521);
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     margin-bottom: var(--cor5);
 }
 
