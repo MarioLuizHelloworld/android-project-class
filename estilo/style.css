@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Android' ;
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root{
+    --cor0: #94c78c;
+    --cor1: #7bdf6b;
+    --cor2: #45BF55;
+    --cor3: #168039;
+    --cor4: #044D29;
+    --cor5: #00261C;
+
+    --fontepadrao: arial, helvetica, sans-serif;
+    --font-destaque: 'Bebas Neue', cursive;
+    --font-android: 'Android'; 
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+    /* Esse (*) significa configuração global, nele consigo mexer em todos os mais e padding por ex.*/
+
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--fontepadrao);
+}
+
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 30px; /*Pra descolar meu h1  da parte de cima*/ 
+
+}
+
+header > h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: normal;
+    font-family: var(--font-destaque);
+    margin-bottom: 20px; /*Pra afastar o h1 e o p do header*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.486);
+}
+
+header > p{
+    font-family: var(--fontepadrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.521);
+    margin-bottom: 30px;
+    margin-bottom: var(--cor5);
+}
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.288);
+}
+
+nav > a{
+    color: var(--cor0);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.3s; /*Tempo que leva pro background aparecer qnd passo o mouse por cima*/
+}
+
+nav > a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+
+}
+
+main{
+    background-color: white;
+    margin: auto;
+    padding: 20px; /*Pro conteúdo não ficar grudado na lateral*/
+    min-width: 300px; /*Pro conteúdo se adaptar a tela*/ 
+    max-width: 1000px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /*Pro main não ficar grudado no rodapé*/
+    border-radius: 0px 0px 10px 10px;
+}
+
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em; /*Espaçamento entre linhas*/
+}
+
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: #7bdf6bc2;
+    padding: 2px 6px;
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+main img{
+    width: 100%; /*Pra imagem não quebrar*/
+}
+
+main h1 {
+    font-family: var(--font-android);
+    color: var(--cor5);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2 {
+    font-family: var(--font-android);
+    color: var(--cor4);
+    font-weight: normal;
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+
+}
+
+main img.pequena{
+    display: block; /*Pro caso de não ter uma segunda imagem, a imagem centraliza pq vira bloco*/
+    margin: auto;
+    max-width: 350px;
+
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+
+aside {
+    background-color: #4f9e76e3;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.479);
+}
+
+aside > h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /* esses negativos são pro h3 se integrar com o bloco aside */
+    border-radius: 8px 8px 0px 0px;
+}
+
+aside > ul{
+    list-style-type: '\2714\00A0\00A0'; /* Tem que colocar a contrabarra (\) ou '✓'. \00A0\00A0 isso serve como espaço */
+    list-style-position: inside; /* columns - Divide a coluna em dois e list position coloca ela dentro da caixa certinho. */
+    columns: 2; 
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+    font-size: 0.8;
+    text-align: center;
+    padding: 5px;
+}
+
+footer > p > a{ /* Posso colocar tanto assim qnt footer a, pq o a está dentro do p, entao não pode ser footer > a */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor0);
+}
